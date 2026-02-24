@@ -1,0 +1,1 @@
+<h1>POS Sales Transaction Page</h1>
