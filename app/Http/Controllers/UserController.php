@@ -40,17 +40,19 @@ class UserController extends Controller
 {
     public function index()
     {
-        
-        $data = [
-            'level_id' => 2,
-            'username' => 'manager_Tiga',
-            'nama' => 'Manager 3',
-            'password' => Hash::make('12345')
-        ];
+        // $user = UserModel::findOr(20, ['username', 'nama'], function (){
+        //     abort(404);
+        // });
+        // $data = [
+        //     'level_id' => 2,
+        //     'username' => 'manager_Tiga',
+        //     'nama' => 'Manager 3',
+        //     'password' => Hash::make('12345')
+        // ];
     
-        UserModel::create($data);
+        // UserModel::create($data);
         
-        $user = UserModel::all();
+        $user = UserModel::where('username', 'manager9')->firstOrFail();
         return view('user', ['data' => $user]);
     }
 }
