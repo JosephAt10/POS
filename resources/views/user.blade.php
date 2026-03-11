@@ -1,16 +1,12 @@
-{{-- <!DOCTYPE html>
-<html>
-    <head>
-        <title>Data User</title>
-    </head>
-    <body>
+<!DOCTYPE html>
+<body>
         <h1>Data User</h1>
         <table border="1" cellpadding="2" cellspacing="0">
             <tr>
-                <th>ID</th>
-                <th>Username</th>
-                <th>Nama</th>
-                <th>ID Level Pengguna</th>
+                <td>ID</td>
+                <td>Username</td>
+                <td>Nama</td>
+                <td>ID Level Pengguna</td>
             </tr>
                 <tr>
                     <td>{{ $data->user_id }}</td>
@@ -20,10 +16,10 @@
                 </tr>
         </table>
     </body>
-</html> --}}
+</html>
 
 
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html>
 <head>
     <title>Data User</title>
@@ -41,4 +37,4 @@
     </table>
 
 </body>
-</html>
+</html> --}}

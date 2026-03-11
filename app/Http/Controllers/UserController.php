@@ -49,11 +49,23 @@ class UserController extends Controller
         //     'nama' => 'Manager 3',
         //     'password' => Hash::make('12345')
         // ];
-    
+
         // UserModel::create($data);
+
+        // $user = UserModel::where('level_id', 2)->count();
+        // // dd($user);
+        // return view('user', ['data' => $user]);
+
+        $user = UserModel::firstOrNew(
+            [
+                'username' => 'manager33',
+                'nama' => 'Manager Tiga Tiga',
+                'password' => hash::make('12345'),
+                'level_id' => 2
+            ]
+        );
+        $user->save();
         
-        $user = UserModel::where('level_id', 2)->count();
-        // dd($user);
         return view('user', ['data' => $user]);
     }
 }
